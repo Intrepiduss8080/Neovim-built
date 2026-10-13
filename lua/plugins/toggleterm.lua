@@ -5,7 +5,7 @@ return {
     config = function()
       require("toggleterm").setup({
         size = 12,
-        open_mapping = [[<C-`>]],  -- одна клавиша: открыть И закрыть
+        open_mapping = [[<C-`>]],  
         direction = "horizontal",
         shade_terminals = true,
         start_in_insert = true,
@@ -20,7 +20,6 @@ return {
         },
       })
 
-      -- Esc / jk для выхода из terminal mode в normal
       function _G.set_terminal_keymaps()
         local opts = { buffer = 0 }
         vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)

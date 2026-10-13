@@ -1,8 +1,8 @@
 -- ~/.config/nvim/lua/plugins/color.lua
 
--- "kanagawa" | "tokyonight" | "catppuccin" | "gruvbox" | "onedark"
+-- "kanagawa" | "tokyonight" | "catppuccin" | "gruvbox" | "onedark" | "cyberdream"
 -- "everforest" | "rose-pine" | "nightfox" | "melange" | "ayu"
-local theme = "ayu"
+local theme = "cyberdream"
 
 local configs = {
   kanagawa = {
@@ -75,6 +75,14 @@ local configs = {
       require("ayu").setup({ mirage = true })
       vim.cmd("colorscheme ayu")
     end,
+  },
+
+  cyberdream = {
+      "scottmckendry/cyberdream.nvim",
+      config = function()
+          require("cyberdream").setup({})
+          vim.cmd("colorscheme cyberdream")
+        end,
   },
 }
 
