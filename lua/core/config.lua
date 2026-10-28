@@ -32,11 +32,7 @@ opt.swapfile = false
 
 vim.keymap.set('i', '"', '""<Left>', { noremap = true })
 
-
--- Ctrl + c в визуальном режиме копирует в системный буфер
 vim.keymap.set('v', '<C-c>', '"+y')
-
--- Ctrl + v в режиме вставки или командной строке вставляет текст
 vim.keymap.set('i', '<C-v>', '<C-r>+')
 vim.keymap.set('c', '<C-v>', '<C-r>+')
 

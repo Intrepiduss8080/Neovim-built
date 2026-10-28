@@ -1,25 +1,26 @@
 -- ~/.config/nvim/lua/plugins/color.lua
 
 -- "kanagawa" | "tokyonight" | "catppuccin" | "gruvbox" | "onedark" | "cyberdream"
--- "everforest" | "rose-pine" | "nightfox" | "melange" | "ayu"
+-- "everforest" | "rose-pine" | "nightfox" | "melange" | "ayu" | "oasis"
+
 local theme = "oasis"
 
 local configs = {
-  kanagawa = {
+  kanagawa = { --"themes: wave, dragon, lotus"
     "rebelot/kanagawa.nvim",
     config = function()
       require("kanagawa").setup({ theme = "wave" })
       vim.cmd("colorscheme kanagawa")
     end,
   },
-  tokyonight = {
+  tokyonight = { -- "themes: storm, night, moon, day "
     "folke/tokyonight.nvim",
     config = function()
       require("tokyonight").setup({ style = "storm" })
       vim.cmd("colorscheme tokyonight")
     end,
   },
-  catppuccin = {
+  catppuccin = { --"mocha, frappe, latte, macchiato"
     "catppuccin/nvim",
     name = "catppuccin",
     config = function()
@@ -27,28 +28,28 @@ local configs = {
       vim.cmd("colorscheme catppuccin")
     end,
   },
-  gruvbox = {
+  gruvbox = { --contrast(hard, soft, medium), transparent(true, false), dim_inactive(true, false)
     "ellisonleao/gruvbox.nvim",
     config = function()
-      require("gruvbox").setup({ contrast = "hard" })
+      require("gruvbox").setup({ contrast = "hard" }) -- soft, medium, hard
       vim.cmd("colorscheme gruvbox")
     end,
   },
-  onedark = {
+  onedark = { -- dark, darker, cool, deep, warm, warmer
     "navarasu/onedark.nvim",
     config = function()
       require("onedark").setup({ style = "dark" })
       vim.cmd("colorscheme onedark")
     end,
   },
-  everforest = {
+  everforest = { --hard, medium, soft
     "sainnhe/everforest",
     config = function()
       vim.g.everforest_background = "medium"
       vim.cmd("colorscheme everforest")
     end,
   },
-  ["rose-pine"] = {
+  ["rose-pine"] = { --main, moon, dawn
     "rose-pine/neovim",
     name = "rose-pine",
     config = function()
@@ -56,20 +57,20 @@ local configs = {
       vim.cmd("colorscheme rose-pine")
     end,
   },
-  nightfox = {
+  nightfox = { --nightfox, dayfox, dawnfox, duskfox, nordfox, terafox, carbonfox
     "EdenEast/nightfox.nvim",
     config = function()
       require("nightfox").setup({ options = { colorblind = { enable = true } } })
       vim.cmd("colorscheme nightfox")
     end,
   },
-  melange = {
+  melange = { --  dark, light
     "savq/melange-nvim",
     config = function()
       vim.cmd("colorscheme melange")
     end,
   },
-  ayu = {
+  ayu = { -- mirage, dark, light
     "Shatur/neovim-ayu",
     config = function()
       require("ayu").setup({ mirage = true })
@@ -77,7 +78,7 @@ local configs = {
     end,
   },
 
-  cyberdream = {
+  cyberdream = { --dark, light
       "scottmckendry/cyberdream.nvim",
       config = function()
           require("cyberdream").setup({})
@@ -85,7 +86,7 @@ local configs = {
         end,
   },
 
-  oasis = {
+  oasis = { --night, desert, sol, abyss, scorpion, starlight, cactus and etc
         "uhs-robert/oasis.nvim",
         config = function()
             require("oasis").setup()

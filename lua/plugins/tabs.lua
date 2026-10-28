@@ -33,3 +33,4 @@ return {
   end,
 }
 
+--tabs in neovim
