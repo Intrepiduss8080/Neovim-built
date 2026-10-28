@@ -2,7 +2,7 @@
 
 -- "kanagawa" | "tokyonight" | "catppuccin" | "gruvbox" | "onedark" | "cyberdream"
 -- "everforest" | "rose-pine" | "nightfox" | "melange" | "ayu"
-local theme = "cyberdream"
+local theme = "oasis"
 
 local configs = {
   kanagawa = {
@@ -84,6 +84,14 @@ local configs = {
           vim.cmd("colorscheme cyberdream")
         end,
   },
+
+  oasis = {
+        "uhs-robert/oasis.nvim",
+        config = function()
+            require("oasis").setup()
+            vim.cmd("colorscheme oasis-desert")
+        end,
+    },
 }
 
 local c = configs[theme]

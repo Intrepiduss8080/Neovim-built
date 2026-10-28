@@ -24,7 +24,7 @@ return {
 
             go = {icon = "󰟓", name = "go"},
 
-            lisp = {icon = "", lis},
+            lisp = {icon = "", lisp},
 
             clojure = {icon = "", name = "clj"},
           
@@ -44,6 +44,9 @@ return {
       },
     },
     config = function()
+         
+ 
+
       require("neo-tree").setup({
         window = { 
           width = 25, 
@@ -77,4 +80,6 @@ return {
     end,
   },
 }
+
+
 

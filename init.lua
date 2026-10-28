@@ -8,9 +8,26 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
-
 require("core.config")
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  install = {
+    missing = true,
+  },
+  checker = {
+    enabled = false, -- не проверять обновления автоматически
+  },
+  git = {
+    timeout = 300,        -- 5 минут на одну git-операцию
+    url_format = "https://github.com/%s.git",
+  },
+  concurrency = 1,         -- по одному плагину за раз (стабильнее на плохой сети)
+  rocks = {
+    enabled = false,       -- отключить luarocks, часто лишнее
+  },
+})
+
+
+
+
 
